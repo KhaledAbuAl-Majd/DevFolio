@@ -93,3 +93,94 @@
 
 /* -------------------------- */
 /* -------------------------- */
+/*---------------- Blog ----------------*/
+
+#blog{
+    background:#f5f5f5;
+}
+
+#blog .section-title{
+    font-size:40px;
+    font-weight:700;
+    color:#1e1e1e;
+}
+
+#blog .section-title-line{
+    width:40px;
+    height:5px;
+    background:#0078ff;
+    margin:10px auto 20px;
+}
+
+#blog .blog-card{
+    border:none;
+    border-radius:0;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+#blog .blog-card:hover{
+    transform:translateY(-8px);
+}
+
+#blog .blog-card img{
+    width:100%;
+}
+
+#blog .card-body{
+    position:relative;
+    padding:25px;
+}
+
+#blog .blog-category{
+    position:absolute;
+    top:-15px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#0078ff;
+    color:#fff;
+    padding:6px 18px;
+    font-size:12px;
+    border-radius:4px;
+}
+
+#blog .card-title{
+    font-size:21px;
+    transition:.3s;
+    cursor:pointer;
+}
+
+#blog .card-title:hover{
+    color:#0078ff;
+}
+
+#blog .card-text{
+    color:#6c757d;
+    line-height:1.7;
+}
+
+#blog .card-footer{
+    background:#f8f8f8;
+    padding:15px 20px;
+}
+
+#blog .author{
+    display:flex;
+    align-items:center;
+}
+
+#blog .author img{
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    margin-right:10px;
+}
+
+#blog .author span{
+    font-size:15px;
+}
+
+#blog small{
+    color:#6c757d;
+}
