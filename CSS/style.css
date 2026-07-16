@@ -455,3 +455,93 @@ body{
         font-size: 15px;
     }
 }
+/* -----------services----------------- */
+/* -------------------------------------- */
+
+#services .section-title {
+  font-size: 40px;
+  letter-spacing: 1px;
+  color: #1e1e1e;
+}
+
+#services .section-title-line {
+  width: 40px;
+  height: 5px;
+  background-color: #0078ff;
+  margin: 10px auto 0;
+}
+
+#services .service-card {
+  border-radius: 15px;
+  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+#services .service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px 0 rgba(68, 88, 144, 0.15);
+}
+
+#services .service-icon-box {
+  width: 100px;
+  height: 100px;
+  border: 10px solid #0078ff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+}
+
+#services .service-icon-box i {
+  font-size: 32px;
+  color: #1e1e1e;
+  transition: all 0.4s ease-in-out;
+}
+
+#services .service-card:hover .service-icon-box {
+  background-color: #0078ff;
+  border-color: #cde1f8;
+}
+
+#services .service-card:hover .service-icon-box i {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+#counters .overlay-blue {
+  background-color: var(--second-color);
+  height: 100%;
+}
+
+#counters .counter-icon {
+  width: 80px;
+  height: 80px;
+  border: 8px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#counters .counter-icon i {
+  font-size: 26px;
+  color: #ffffff;
+}
+
+/* تباعد الحروف للنصوص الصغيرة */
+#counters .tracking-wide {
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 32px;
+  }
+  .service-card {
+    padding: 30px 20px !important; /* تقليل البادينج على الشاشات الصغيرة */
+  }
+}
+
+/* -------------------------- */
+/* -------------------------- */
