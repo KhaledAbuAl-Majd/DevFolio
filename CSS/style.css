@@ -4,6 +4,7 @@
   --third-color:#ddd ;
   --P-color:#555;
   --black-transparent:rgba(0, 0, 0, 0.548);
+  --balck-color:#000;
   
 }
 
@@ -30,7 +31,7 @@ body{
     color:var(--main-color) !important;
     font-size:40px;
     font-weight:600;
-    margin-left:-150px;
+    
 }
 
 #navbarNav{
@@ -55,6 +56,7 @@ body{
 .nav-link:hover{
     color:var(--second-color) !important;
 }
+
 
 /* Hero */
 
@@ -108,14 +110,80 @@ body{
 
 /* Responsive */
 
-@media(max-width:768px){
+/* Tablet */
+
+@media screen and (max-width: 992px){
+
+    .navbar-nav{
+        
+        padding: 15px;
+        margin-top: 15px;
+        border-radius: 10px;
+        width: 100%;
+        
+    }
+
+    .nav-link{
+        margin: 10px 0;
+        font-size: 15px;
+        
+    }
 
     .hero-content h1{
-        font-size:42px;
+        font-size: 50px;
     }
 
     .hero-content p{
-        font-size:28px;
+        font-size: 28px;
+    }
+
+
+    
+}
+
+
+
+
+
+
+/* Mobile */
+
+@media screen and (max-width: 768px){
+
+    .navbar{
+        padding: 10px 0;
+    }
+
+    .logo{
+        font-size: 28px;
+    }
+
+    .hero{
+        padding: 0 20px;
+    }
+
+    .hero-content h1{
+        font-size: 38px;
+        line-height: 1.3;
+    }
+
+    .hero-content p{
+        font-size: 22px;
+    }
+
+}
+
+
+/* Small Mobile */
+
+@media screen and (max-width: 576px){
+
+    .hero-content h1{
+        font-size: 30px;
+    }
+
+    .hero-content p{
+        font-size: 18px;
     }
 
 }
@@ -280,21 +348,110 @@ body{
     color:var(--P-color);
 }
 
-@media(max-width:992px){
+/*    About responsive  */
+@media (max-width: 992px){
 
     .about-section{
-        flex-direction:column;
+        flex-direction: column;
+        padding: 40px;
     }
 
     .left-side,
     .right-side{
-        width:100%;
+        width: 100%;
+    }
+
+    .info{
+        margin-left: 0;
+    }
+
+    .right-side h1{
+        font-size: 42px;
+    }
+
+    .right-side p{
+        font-size: 20px;
+    }
+}
+
+@media (max-width:768px){
+
+    .hero-content h1{
+        font-size: 40px;
+    }
+
+    .hero-content p{
+        font-size: 24px;
+    }
+
+    .about-section{
+        width: 95%;
+        padding: 25px;
     }
 
     .left-side{
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
+        text-align: center;
     }
 
-    .skills{
-        grid-column:auto;
+    .left-side img{
+        width: 180px;
+        height: 180px;
+        margin: auto;
     }
+
+    .info{
+        margin-left: 0;
+        font-size: 18px;
+    }
+
+    .skills h3{
+        font-size: 28px;
+    }
+
+    .skills p{
+        font-size: 16px;
+    }
+
+    .right-side h1{
+        font-size: 32px;
+    }
+
+    .right-side p{
+        font-size: 17px;
+        line-height: 1.7;
+    }
+}
+
+
+@media (max-width:480px){
+
+    .hero-content h1{
+        font-size: 32px;
+    }
+
+    .hero-content p{
+        font-size: 20px;
+    }
+
+    .about-section{
+        padding: 20px;
+    }
+
+    .left-side img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .info{
+        font-size: 16px;
+    }
+
+    .right-side h1{
+        font-size: 28px;
+    }
+
+    .right-side p{
+        font-size: 15px;
+    }
+}
