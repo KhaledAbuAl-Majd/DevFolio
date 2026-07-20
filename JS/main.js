@@ -48,3 +48,68 @@ function deleteWord(){
 }
 
 typeWord();
+
+
+
+
+// start portfolio
+
+var curIndex =0;
+var imgs = document.querySelectorAll('.item .img img');
+ var plusIcons = document.querySelectorAll('.fa-circle-plus');
+
+var box = document.querySelector('.box');
+var boxImg = document.querySelector('.box-img');
+var exit = document.querySelector('.fa-circle-xmark');
+var next = document.querySelector('.fa-angle-right');
+var prev = document.querySelector('.fa-angle-left');
+
+for (let i = 0; i < plusIcons.length; i++) {
+     plusIcons[i].onclick = function () {
+        box.classList.remove('d-none');
+        var imgsrc = imgs[i].getAttribute('src');
+        boxImg.style.backgroundImage = `url(${imgsrc})`;
+        curIndex = i;
+    }
+}
+
+next.onclick = function(){
+    curIndex++;
+    if(curIndex == imgs.length){
+        curIndex=0;
+
+    }
+
+    var imgsrc =imgs[curIndex].getAttribute('src');
+    boxImg.style.backgroundImage=`url(${imgsrc})`
+}
+
+prev.onclick = function(){
+    curIndex++;
+    if(curIndex == -1){
+        curIndex= imgs.length - 1;
+
+    }
+
+    var imgsrc =imgs[curIndex].getAttribute('src');
+    boxImg.style.backgroundImage=`url(${imgsrc})`
+}
+
+exit.onclick =function(){
+    box.classList.add('d-none');
+}
+
+
+
+// end portfolio
+
+
+
+
+
+
+
+
+
+
+
