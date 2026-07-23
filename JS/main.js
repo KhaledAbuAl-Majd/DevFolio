@@ -86,57 +86,57 @@ exit.onclick = function () {
 
 //contact section
 
-const form = document.getElementById("contactForm");
-const statusEl = document.getElementById("formStatus");
-const submitBtn = document.getElementById("submitBtn");
+// const form = document.getElementById("contactForm");
+// const statusEl = document.getElementById("formStatus");
+// const submitBtn = document.getElementById("submitBtn");
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-  e.stopPropagation();
+// form.addEventListener("submit", function (e) {
+//   e.preventDefault();
+//   e.stopPropagation();
 
-  if (!form.checkValidity()) {
-    form.classList.add("was-validated");
-    statusEl.style.display = "none";
-    return;
-  }
+//   if (!form.checkValidity()) {
+//     form.classList.add("was-validated");
+//     statusEl.style.display = "none";
+//     return;
+//   }
 
-  form.classList.add("was-validated");
-  submitBtn.disabled = true;
-  submitBtn.textContent = "Sending...";
-  statusEl.style.display = "none";
+//   form.classList.add("was-validated");
+//   submitBtn.disabled = true;
+//   submitBtn.textContent = "Sending...";
+//   statusEl.style.display = "none";
 
-  setTimeout(function () {
-    saveMessageRecord();
+//   setTimeout(function () {
+//     saveMessageRecord();
 
-    submitBtn.disabled = false;
-    submitBtn.textContent = "Send Message";
-    statusEl.textContent = "Success";
-    statusEl.className = "fw-semibold text-success mb-2";
-    statusEl.style.display = "block";
-    form.reset();
-    form.classList.remove("was-validated");
-  }, 1200);
-});
+//     submitBtn.disabled = false;
+//     submitBtn.textContent = "Send Message";
+//     statusEl.textContent = "Success";
+//     statusEl.className = "fw-semibold text-success mb-2";
+//     statusEl.style.display = "block";
+//     form.reset();
+//     form.classList.remove("was-validated");
+//   }, 1200);
+// });
 
-function saveMessageRecord() {
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const subject = document.getElementById("subject").value;
-  const message = document.getElementById("message").value;
-  const timestamp = new Date().toLocaleString("en-GB");
+// function saveMessageRecord() {
+//   const name = document.getElementById("name").value;
+//   const email = document.getElementById("email").value;
+//   const subject = document.getElementById("subject").value;
+//   const message = document.getElementById("message").value;
+//   const timestamp = new Date().toLocaleString("en-GB");
 
-  const newRecord = {
-    date: timestamp,
-    name: name,
-    email: email,
-    subject: subject,
-    message: message,
-  };
+//   const newRecord = {
+//     date: timestamp,
+//     name: name,
+//     email: email,
+//     subject: subject,
+//     message: message,
+//   };
 
-  let allMessages = JSON.parse(localStorage.getItem("saved_messages")) || [];
-  allMessages.push(newRecord);
+//   let allMessages = JSON.parse(localStorage.getItem("saved_messages")) || [];
+//   allMessages.push(newRecord);
 
-  localStorage.setItem("saved_messages", JSON.stringify(allMessages));
+//   localStorage.setItem("saved_messages", JSON.stringify(allMessages));
 
-  console.log("تم حفظ الرسالة بنجاح في LocalStorage!");
-}
+//   console.log("تم حفظ الرسالة بنجاح في LocalStorage!");
+// }

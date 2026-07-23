@@ -662,105 +662,104 @@
       </div>
     </section>
 
-    <!-- contact section -->
-    <section id="contact" class="contact-section">
+    <!--contact-->
+
+    <section id="contact" class="contact-section py-5">
       <div class="container">
-        <div class="contact-card">
-          <div class="row g-5">
-            <div class="col-lg-6">
-              <h2 class="section-title">Send Message Us</h2>
+        <div class="row g-4 align-items-stretch justify-content-center">
+          <div class="col-lg-10">
+            <div class="contact-card">
+              <div class="row g-0">
+                <!-- الفورم -->
+                <div class="col-lg-6 p-4 p-lg-5">
+                  <h3 class="section-title">Send Message Us</h3>
+                  <form>
+                    <label for="name" class="visually-hidden">Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      class="form-control mb-3"
+                      placeholder="Name"
+                      required
+                    />
 
-              <form id="contactForm" class="needs-validation" novalidate>
-                <div class="mb-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="name"
-                    placeholder="Name"
-                    required
-                  />
-                  <div class="invalid-feedback">Name is required.</div>
-                  <div class="valid-feedback">Looks good!</div>
+                    <label for="email" class="visually-hidden">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-control mb-3"
+                      placeholder="Email"
+                      required
+                    />
+
+                    <label for="subject" class="visually-hidden">Subject</label>
+                    <input
+                      type="text"
+                      id="subject"
+                      name="subject"
+                      class="form-control mb-3"
+                      placeholder="Subject"
+                      required
+                    />
+
+                    <label for="message" class="visually-hidden">Message</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      class="form-control mb-4"
+                      rows="5"
+                      placeholder="Message"
+                      required
+                    ></textarea>
+
+                    <button type="submit" class="btn btn-send rounded-pill">
+                      Send Message
+                    </button>
+                  </form>
                 </div>
 
-                <div class="mb-3">
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    placeholder="Email"
-                    required
-                  />
-                  <div class="invalid-feedback">A valid email is required.</div>
-                  <div class="valid-feedback">Looks good!</div>
-                </div>
+                <!-- المعلومات -->
+                <div class="col-lg-6 p-4 p-lg-5">
+                  <h3 class="section-title">Get Touch</h3>
+                  <p class="info-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Facilis dolorum dolorem soluta quidem expedita aperiam
+                    aliquid at. Totam magni ipsum suscipit amet? Autem nemo esse
+                    laboriosam ratione nobis mollitia inventore?
+                  </p>
 
-                <div class="mb-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="subject"
-                    placeholder="Subject"
-                    required
-                  />
-                  <div class="invalid-feedback">Subject is required.</div>
-                  <div class="valid-feedback">Looks good!</div>
-                </div>
+                  <ul class="list-unstyled info-list">
+                    <li class="mb-3">
+                      <i class="fa-solid fa-location-dot"></i>
+                      329 WASHINGTON ST BOSTON
+                    </li>
+                    <li class="mb-3">
+                      <i class="fa-solid fa-mobile-screen"></i>
+                      (617) 557-0089
+                    </li>
+                    <li class="mb-3">
+                      <i class="fa-solid fa-envelope"></i>
+                      contact@example.com
+                    </li>
+                  </ul>
 
-                <div class="mb-3">
-                  <textarea
-                    class="form-control"
-                    id="message"
-                    rows="5"
-                    placeholder="Message"
-                    required
-                  ></textarea>
-                  <div class="invalid-feedback">Message is required.</div>
-                  <div class="valid-feedback">Looks good!</div>
-                </div>
-
-                <div class="text-center">
-                  <div
-                    id="formStatus"
-                    class="fw-semibold text-success mb-2"
-                    style="display: none"
-                  >
-                    Success
+                  <div class="social-icons">
+                    <a href="#" aria-label="Facebook"
+                      ><i class="fa-brands fa-facebook-f"></i
+                    ></a>
+                    <a href="#" aria-label="Instagram"
+                      ><i class="fa-brands fa-instagram"></i
+                    ></a>
+                    <a href="#" aria-label="Twitter"
+                      ><i class="fa-brands fa-twitter"></i
+                    ></a>
+                    <a href="#" aria-label="LinkedIn"
+                      ><i class="fa-brands fa-linkedin-in"></i
+                    ></a>
                   </div>
-                  <button type="submit" class="btn btn-send" id="submitBtn">
-                    Send Message
-                  </button>
                 </div>
-              </form>
-            </div>
-
-            <div class="col-lg-6">
-              <h2 class="section-title">Get Touch</h2>
-              <p class="text-muted">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-                dolorem dolorem soluta quidem expedita aperiam aliquid at. Totam
-                magni ipsum suscipit amet? Autem nemo esse laboriosam ratione
-                nobis mollitia inventore?
-              </p>
-
-              <div class="info-item">
-                <i class="fa-solid fa-location-dot"></i>
-                <span>329 Washington St Boston</span>
-              </div>
-              <div class="info-item">
-                <i class="fa-solid fa-mobile-screen"></i>
-                <span>(617) 557-0089</span>
-              </div>
-              <div class="info-item">
-                <i class="fa-solid fa-envelope"></i>
-                <span>contact@example.com</span>
-              </div>
-
-              <div class="social-icons mt-4">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
               </div>
             </div>
           </div>
@@ -768,20 +767,17 @@
       </div>
     </section>
 
-    <!-- footer  -->
-
-    <footer id="footer" class="site-footer">
-      <div class="container text-center">
-        <p class="mb-1">
-          © Copyright <strong>DevFolio</strong>. All Rights Reserved
-        </p>
-        <p class="mb-0">
-          Designed by
-          <a href="https://bootstrapmade.com/" target="_blank" rel="noopener"
-            >BootstrapMade</a
-          >
-        </p>
+    <!--end contact -->
+    <!---------------------------- footer ------------------------------------>
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; Copyright <strong>DevFolio.</strong> All Rights Reserved</p>
+        <p>Designed by BootstrapMade</p>
       </div>
+
+      <a href="#" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+      </a>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>

@@ -699,119 +699,155 @@ i.fa-circle-xmark {
 /* contact section */
 
 .contact-section {
-  background:
-    linear-gradient(rgba(0, 60, 150, 0.55), rgba(0, 60, 150, 0.55)),
-    url("https://images.unsplash.com/photo-1497294815431-9365093b7331?q=80&w=1600&auto=format&fit=crop")
-      center/cover no-repeat;
-  padding: 80px 0;
+  background-color: #4a9af0;
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(74, 154, 240, 0.75) 100%,
+      rgba(74, 154, 240, 0.75) 100%
+    ),
+    url("img/imgi_14_overlay-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .contact-card {
-  background: #fff;
-  border-radius: 6px;
-  padding: 50px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
 }
 
-.contact-section .section-title {
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.5);
+}
+
+.section-title {
   font-weight: 700;
+  color: #212529;
   position: relative;
-  padding-bottom: 12px;
-  margin-bottom: 25px;
+  padding-bottom: 14px;
+  margin-bottom: 1.5rem;
 }
 
-.contact-section .section-title::after {
+.section-title::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 50px;
+  width: 55px;
   height: 3px;
-  background: #2487ce;
+  background: #4a9af0;
 }
 
 .contact-section .form-control {
-  border-radius: 4px;
-  padding: 12px 14px;
+  border-radius: 6px;
+  border: 1px solid #dee2e6;
+  padding: 0.75rem 1rem;
 }
 
 .contact-section .form-control:focus {
-  border-color: #2487ce;
-  box-shadow: 0 0 0 0.2rem rgba(36, 135, 206, 0.15);
+  border-color: #4a9af0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 120, 255, 0.15);
 }
 
 .btn-send {
-  background: #2487ce;
+  background-color: #4a9af0;
   color: #fff;
   border: none;
-  border-radius: 4px;
-  padding: 10px 30px;
+  padding: 0.65rem 2rem;
   font-weight: 500;
 }
 
 .btn-send:hover {
-  background: #1a6ba3;
+  background-color: #4a9af0;
   color: #fff;
 }
 
-.btn-send:disabled {
-  opacity: 0.7;
+.info-text {
+  color: #6c757d;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
 }
 
-.contact-section .info-item {
+.info-list li {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 12px;
-  margin-bottom: 14px;
+  color: #212529;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
 }
 
-.contact-section .info-item i {
-  color: #2487ce;
+.info-list i {
+  color: #4a9af0;
+  font-size: 1.1rem;
   width: 20px;
   text-align: center;
-  margin-top: 4px;
 }
 
-.contact-section .social-icons a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 1.5rem;
+}
+
+.social-icons a {
   width: 38px;
   height: 38px;
-  border: 1px solid #2487ce;
-  color: #2487ce;
+  border: 1.5px solid #4a9af0;
   border-radius: 50%;
-  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4a9af0;
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
-.contact-section .social-icons a:hover {
-  background: #2487ce;
+.social-icons a:hover {
+  background: #4a9af0;
   color: #fff;
 }
-
-/* footer */
-.site-footer {
-  background: linear-gradient(180deg, #1a5fc4 0%, #2487ce 40%, #2487ce 100%);
-  padding: 30px 0;
-  color: #fff;
+/*---------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------- Footer -----------------------------------------------------*/
+.footer {
+  background-color: #06377e;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
 }
 
-.site-footer p {
-  font-size: 15px;
-  color: #eef4fb;
+.footer p {
+  margin: 5px 0;
 }
 
-.site-footer strong {
-  color: #fff;
-}
-
-.site-footer a {
-  color: #fff;
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0d6efd;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
+  transition: background 0.3s;
 }
 
-.site-footer a:hover {
-  text-decoration: underline;
+.back-to-top:hover {
+  background-color: #0d6efd;
 }
