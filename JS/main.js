@@ -37,6 +37,54 @@ function deleteWord() {
 
 typeWord();
 
+//start services
+
+AOS.init();
+
+// 2. Counter Animation Logic
+const counters = document.querySelectorAll(".counter");
+const speed = 120;
+
+function startCounter(counter) {
+  const updateCount = () => {
+    const target = +counter.getAttribute("data-target");
+    const count = +counter.innerText;
+
+    const inc = Math.ceil(target / speed);
+
+    if (count < target) {
+      counter.innerText = Math.min(count + inc, target);
+      setTimeout(updateCount, 20);
+    } else {
+      counter.innerText = target;
+    }
+  };
+
+  updateCount();
+}
+
+const sectionCounters = document.querySelector("#counters");
+let started = false;
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    const [entry] = entries;
+    if (entry.isIntersecting && !started) {
+      counters.forEach((counter) => startCounter(counter));
+      started = true;
+    }
+  },
+  {
+    threshold: 0.4,
+  },
+);
+
+if (sectionCounters) {
+  observer.observe(sectionCounters);
+}
+
+//end services
+
 // start portfolio
 
 var curIndex = 0;
