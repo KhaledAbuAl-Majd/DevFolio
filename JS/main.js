@@ -117,7 +117,7 @@ next.onclick = function () {
 };
 
 prev.onclick = function () {
-  curIndex++;
+  curIndex--;
   if (curIndex == -1) {
     curIndex = imgs.length - 1;
   }
